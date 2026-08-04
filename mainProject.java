@@ -55,9 +55,13 @@ public class mainProject{
                 case 3: 
                     System.out.print("Enter task number which you want to remove : ");
                     int removeTask = sc.nextInt();
-                    removeTask--;
-                    tasks.remove(removeTask);
-                    System.out.println("Task is removed");
+                    if(removeTask > 0 && removeTask <= tasks.size()){
+                        removeTask--;
+                        tasks.remove(removeTask);
+                        System.out.println("Task is removed");     
+                    } else{
+                        System.out.println("Invalid Input");
+                    }                 
                     break; 
                     
                 case 4: 
