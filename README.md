@@ -1,2 +1,2 @@
 # ToDoList
-A JAVA To-Do List Project with ArrayList
+A JAVA To-Do List Project using ArrayList
