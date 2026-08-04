@@ -46,9 +46,13 @@ public class mainProject{
                     break;
 
                 case 2:
-                    System.out.println("Your tasks ");
-                    for(int i=0; i<tasks.size(); i++){
-                        System.out.println(" - " + tasks.get(i));
+                    if(tasks.size() < 1){
+                        System.out.println("No tasks");
+                    } else{
+                        System.out.println("Your tasks");
+                        for(int i=0; i<tasks.size(); i++){
+                            System.out.println(" - " + tasks.get(i));
+                        }
                     }
                     break;
 
