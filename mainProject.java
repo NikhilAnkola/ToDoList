@@ -55,6 +55,7 @@ public class mainProject{
                 case 3: 
                     System.out.print("Enter task number which you want to remove : ");
                     int removeTask = sc.nextInt();
+                    removeTask--;
                     tasks.remove(removeTask);
                     System.out.println("Task is removed");
                     break; 
