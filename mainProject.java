@@ -17,8 +17,26 @@ public class mainProject{
 
             System.out.print("Enter the operation which you want to perform : ");
             int choice = sc.nextInt();      
+            sc.nextLine();
 
+            /*
+                * WHY WE NEED sc.nextLine() HERE:
+                * 
+                * When you type a number and press 'Enter', two things enter the input buffer:
+                * 1. The number itself (e.g., '1')
+                * 2. The 'Enter' key press (the newline character '\n')
+                * 
+                * - sc.nextInt() only grabs the number, leaving the '\n' sitting in the buffer.
+                * - When the code later hits sc.nextLine() inside the switch statement, it 
+                *   instantly reads that leftover '\n', assumes you hit 'Enter' with an empty 
+                *   string, and skips your input entirely.
+                * 
+                * THE FIX: This standalone sc.nextLine() acts as a cleanup step. It consumes 
+                * and discards the leftover '\n' from the buffer, ensuring the next 
+                * sc.nextLine() actually waits for the user to type their task.
+            */
 
+            
             switch(choice){
                 case 1: 
                     System.out.print("Enter a task : ");
