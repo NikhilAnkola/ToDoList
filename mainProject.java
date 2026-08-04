@@ -14,15 +14,40 @@ public class mainProject{
             System.out.println("3 : Remove Task");
             System.out.println("4 : Exit");
 
-            int choice = sc.nextInt();
+
+            System.out.print("Enter the operation which you want to perform : ");
+            int choice = sc.nextInt();      
+
 
             switch(choice){
                 case 1: 
-                System.out.print("Enter a task : ");
-                String task = sc.nextLine();
-                tasks.add(task);
-                System.out.println("Task has been added");
-                break;
+                    System.out.print("Enter a task : ");
+                    String task = sc.nextLine();
+                    tasks.add(task);
+                    System.out.println("Task has been added");
+                    break;
+
+                case 2:
+                    System.out.println("Your tasks ");
+                    for(int i=0; i<tasks.size(); i++){
+                        System.out.println(" - " + tasks.get(i));
+                    }
+                    break;
+
+                case 3: 
+                    System.out.print("Enter task number which you want to remove : ");
+                    int removeTask = sc.nextInt();
+                    tasks.remove(removeTask);
+                    System.out.println("Task is removed");
+                    break; 
+                    
+                case 4: 
+                    System.out.println("You have exited");
+                    isTrue = false;
+                    break;
+
+                default:
+                    System.out.println("Invalid Input");
             }
         }
 
